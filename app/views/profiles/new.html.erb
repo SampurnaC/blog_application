@@ -1,0 +1,6 @@
+<%= simple_form_for @profile do |f| %>
+    <%= f.input :name %>
+    <%= f.input :bio %>
+    <%= hidden_field :user_id, :value => current_user.id %>
+    <%= f.button :submit, class: "btn btn-warning" %>
+<% end %>
