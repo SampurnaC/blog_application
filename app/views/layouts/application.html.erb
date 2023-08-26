@@ -29,8 +29,12 @@
         </ul>
         <div class="d-flex text-white">
           <% if current_user %>
-            <%#= link_to "Edit Profile", root_path, class: "navbar-brand" %>
-            <button class="btn btn-primary" type="button">Logout <%= current_user.email %></button>
+            
+            <%= link_to "View Profile", profiles_path, class: "navbar-brand" %>
+
+            <%= button_to "Logout", destroy_user_session_path, method: :delete  %>
+          <% else %>
+            <%= button_to "Sign In", new_user_session_path  %>
           <% end %>
         </div>
       </div>
