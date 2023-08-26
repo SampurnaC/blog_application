@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
+  resources :profiles
 
   root "posts#index"
 end
