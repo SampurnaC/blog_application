@@ -2,6 +2,7 @@ class PostsController < ApplicationController
     before_action :authenticate_user!, only: [:new]
     def index
         @posts = Post.all.order('created_at DESC')
+        @profile=current_user.profile if current_user.present?
     end
 
     def new
