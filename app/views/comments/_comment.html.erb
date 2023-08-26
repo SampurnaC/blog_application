@@ -4,7 +4,9 @@
         <br>
         <%= comment.comment %>
         <br>
-        Comment Added By: <%= comment.user.email %>
+        <% if comment.user.present? %>
+            Comment Added By: <%= comment.user.email %>
+        <% end %>
     </div>
 
     <div class="col-md-5">
