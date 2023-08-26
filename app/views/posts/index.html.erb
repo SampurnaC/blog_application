@@ -1,11 +1,9 @@
-<% @posts.each do |post| %>
-    Title: 
-    <%= link_to "#{post.title}", post_path(post) %>
-    <br>
-    Content:<%= post.content %>
-    <br>
-    <br>
-    <br>
-    <br>
 
+<% @posts.each do |post| %>
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-5 col-sm-12 border-bottom position-relative">
+          <p><strong> Title:  <%= link_to "#{post.title}", post_path(post) %></p></strong>
+          <p>Content:<%= post.content %></p>
+      </div>
+    </div>
 <% end %>

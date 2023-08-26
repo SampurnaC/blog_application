@@ -1,7 +1,14 @@
-<%= comment.name %>
-<br>
-<%= comment.comment %>
+<div class="row">
+    <div class="col-md-7">
+        <%= comment.name %>
+        <br>
+        <%= comment.comment %>
+    </div>
 
-<%= button_to "Delete Comment", post_comment_path(@post.id,comment), method: :delete %>
+    <div class="col-md-5">
 
+        <%= button_to "Delete Comment", post_comment_path(@post.id,comment), method: :delete, class: "btn btn-danger" %>
+    </div>
+    <div class="border-bottom"></div>
+</div>
 
