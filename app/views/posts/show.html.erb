@@ -1,0 +1,21 @@
+
+<br>
+<br>
+<br>
+<br>
+
+Title: <%= @post.title %>
+<br>
+Content: <%= @post.content %>
+
+<br>
+<%= button_to "Delete", post_path(@post), method: :delete %>
+<br>
+<%= render partial: "comments/comment", collection: @post.comments, as: :comment %>
+
+<hr />
+Add a Comment
+<%= render partial: 'comments/form' %>
+
+<%= @post.comments.count %> Comments
+

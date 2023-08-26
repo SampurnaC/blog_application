@@ -1,0 +1,11 @@
+<% @posts.each do |post| %>
+    Title: 
+    <%= link_to "#{post.title}", post_path(post) %>
+    <br>
+    Content:<%= post.content %>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<% end %>
