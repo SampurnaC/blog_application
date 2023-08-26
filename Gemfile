@@ -44,6 +44,7 @@ gem "bootsnap", require: false
 
 gem 'simple_form'
 gem 'pry'
+gem 'devise'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
