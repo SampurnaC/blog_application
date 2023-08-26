@@ -12,6 +12,31 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <%= link_to "All Posts", root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          
+        <% if false %>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Link</a>
+          </li>
+          <% end %>
+        </ul>
+        <div class="d-flex text-white">
+          <% if current_user %>
+            <%#= link_to "Edit Profile", root_path, class: "navbar-brand" %>
+            <button class="btn btn-primary" type="button">Logout <%= current_user.email %></button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </nav>
+
     <%= yield %>
   </body>
 </html>
