@@ -3,6 +3,7 @@ class PostsController < ApplicationController
     def index
         @posts = Post.all.order('created_at DESC')
         @profile=current_user.profile if current_user.present?
+        @categories=Category.all
     end
 
     def new
@@ -47,7 +48,7 @@ class PostsController < ApplicationController
     private
 
     def post_params
-        params.require(:post).permit(:title, :content)
+        params.require(:post).permit(:title, :content, :category_id)
     end
 
 end
