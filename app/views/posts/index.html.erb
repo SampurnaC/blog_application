@@ -11,11 +11,10 @@
         <% end %>
 
       </div>
-      <div class="col-md-2">
-        <h2>Categories</h2>
-        <% @categories.each do |category| %>
-          <p><%= category.name %></p>
-        <% end %>       
-      </div>
+      
+
+      <%= render partial: 'categories/all_categories' %>
+
     </div>
   </div>
+

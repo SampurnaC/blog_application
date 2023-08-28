@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :profiles
+  resources :categories, only: [:show]
 
   root "posts#index"
 end
