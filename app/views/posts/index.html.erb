@@ -1,13 +1,19 @@
 
-<% @posts.each do |post| %>
-    <div class="row justify-content-center mt-3">
-      <div class="col-md-5 col-sm-12 border-bottom position-relative">
+<div class="container">
+    <div class="row mt-5">
+      <div class="col-md-10">
+        <% @posts.each do |post| %>
+
           <p><strong> Title:  <%= link_to "#{post.title}", post_path(post) %></p></strong>
           <p>Content:<%= post.content %></p>
           <p>Author:<%= post.user.email %></p>
+          <hr>
+        <% end %>
 
       </div>
+      <div class="col-md-2">
+        <h2>Categories</h2>
+          
+      </div>
     </div>
-
-
-<% end %>
+  </div>
