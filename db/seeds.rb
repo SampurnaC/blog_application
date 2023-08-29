@@ -23,7 +23,7 @@ p "Created #{User.count} users"
 end
 p "Created #{Category.count} categories"
 
-10.times do |index|
+50.times do |index|
 	Post.create!(
 		title: Faker::Quote.famous_last_words,
 		content: Faker::Quote.matz,
