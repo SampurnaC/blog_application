@@ -4,9 +4,9 @@
       <div class="col-md-10">
         <% @posts.each do |post| %>
 
-          <p><strong> Title:  <%= link_to "#{post.title}", post_path(post) %></p></strong>
+          <p><strong> Title:  <%= link_to "#{post.title}", post_path(post), class: "text-dark" %></p></strong>
           <p>Content:<%= post.content %></p>
-          <p>Author:<%= post.user.email %></p>
+          <p class="text-success">Author:<%= post.user.email %></p>
           <hr>
         <% end %>
 

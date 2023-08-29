@@ -13,7 +13,7 @@
 
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <div class="container-fluid">
+    <div class="container">
       <%= link_to "All Posts", root_path, class: "navbar-brand" %>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
@@ -32,9 +32,9 @@
             
             <%= link_to "View Profile", profiles_path, class: "navbar-brand" %>
 
-            <%= button_to "Logout", destroy_user_session_path, method: :delete  %>
+            <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-light"  %>
           <% else %>
-            <%= button_to "Sign In", new_user_session_path  %>
+            <%= button_to "Sign In", new_user_session_path, class: "btn btn-light"  %>
           <% end %>
         </div>
       </div>
