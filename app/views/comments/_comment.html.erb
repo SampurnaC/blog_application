@@ -3,7 +3,7 @@
         <%= comment.comment %>
         <br>
         <% if comment.user.present? %>
-            Comment Added By: <%= comment.user.email %>
+            <p class="text-success">Comment Added By: <%= comment.user.email %></p>
         <% end %>
     </div>
 
