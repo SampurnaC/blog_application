@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
     
     def index
         @profile=current_user.profile
-        @posts=Post.where(user_id: current_user)
+        @posts=Post.includes(:user).where(user_id: current_user)
 
     end
 
