@@ -23,13 +23,14 @@ p "Created #{User.count} users"
 end
 p "Created #{Category.count} categories"
 
-50.times do |index|
+100.times do |index|
 	Post.create!(
 		title: Faker::Quote.famous_last_words,
 		content: Faker::Quote.matz,
 		user: User.last,
-		category: Category.last
+		category_id: Category.all.map(&:id).sample
 	)
+	p "Created #{Post.count} posts"
 end
 p "Created #{Post.count} posts"
 
