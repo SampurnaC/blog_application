@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
 
   root "posts#index"
+
+  get '/search', to: "posts#search"
+
 end

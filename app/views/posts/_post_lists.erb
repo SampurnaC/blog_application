@@ -1,0 +1,21 @@
+
+<div class="container">
+<div class="row mt-5">
+  <div class="col-md-10">
+    <% @posts.each do |post| %>
+
+      <p><strong> Title:  <%= link_to "#{post.title}", post_path(post), class: "text-dark" %></p></strong>
+      <p>Content:<%= post.content %></p>
+      <p class="text-success">Author:<%= post.user.email %></p>
+      <hr>
+    <% end %>
+
+  </div>
+  
+
+  <%= render partial: 'categories/all_categories' %>
+  <%= paginate @posts %>
+
+</div>
+</div>
+

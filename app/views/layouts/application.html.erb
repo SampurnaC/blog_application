@@ -12,11 +12,19 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: papayawhip">
+    
     <div class="container">
       <%= link_to "All Posts", root_path, class: "navbar-brand" %>
       <%= link_to "Create Post", new_post_path, class: "navbar-brand" %>
 
+      <form action="/search" class="d-flex">
+        
+
+        <input name="key" class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,12 +37,18 @@
           <% end %>
         </ul>
         <div class="d-flex text-white">
+
+          
+
           <% if current_user %>
             <%= link_to "View Profile", profiles_path, class: "navbar-brand" %>
             <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-light"  %>
           <% else %>
             <%= button_to "Sign In", new_user_session_path, class: "btn btn-light"  %>
           <% end %>
+
+          
+
         </div>
       </div>
     </div>

@@ -45,6 +45,12 @@ class PostsController < ApplicationController
         redirect_to posts_path
     end
 
+    def search
+        key = "%#{params[:key]}%"
+        @posts = Post.where("title LIKE ?", key).page(params[:page]).order('created_at DESC')
+        @categories=Category.all
+    end
+
     private
 
     def post_params
